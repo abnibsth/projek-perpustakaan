@@ -1,0 +1,496 @@
+:root {
+  scroll-behavior: smooth;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+/* navbar */
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  min-height: 60px;
+  align-items: center;
+  background: #e4eefa;
+  padding: 0px 5% 0px 5%;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  transition: all;
+  transition-duration: 300ms;
+  border-bottom: 1px solid rgba(67, 67, 67, 0.1);
+}
+
+nav div img {
+  width: 100px;
+}
+nav ul li a:hover {
+  border-bottom: 1px solid black;
+  color: rgb(75, 80, 75);
+}
+nav p.judul {
+  display: flex;
+  color: #00a6a6;
+}
+.menu-icon {
+  font-size: 28px;
+  display: none;
+}
+@media only screen and (max-width: 765px) {
+  nav {
+    flex-wrap: wrap;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  nav ul.hidden {
+    display: none;
+  }
+  .menu-icon {
+    display: flex;
+    align-items: center;
+  }
+}
+/* slider */
+.slides {
+  width: 100%;
+  position: relative;
+}
+
+.slides .slide {
+  display: none;
+}
+
+.slides .slide img {
+  width: 100%;
+  height: auto;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slides .navigation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.slides .navigation .prev,
+.slides .navigation .next {
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  background: rgba(52, 52, 52, 0.5);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .prev:hover,
+.slides .navigation .next:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 992px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+@media (max-width: 576px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+@media (max-width: 360px) {
+  .slides .navigation .prev,
+  .slides .navigation .next {
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+/* tentang kami */
+.footer {
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+  background-color: #e4eefa;
+}
+.footer h4 {
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 600;
+}
+/* koleksi */
+.isi {
+  max-width: 960px;
+  height: 500px;
+  margin: 20px auto;
+  padding: 50px;
+  padding-bottom: 100px;
+  margin-bottom: 600px;
+}
+.libary {
+  text-align: center;
+}
+.libary h2 {
+  color: #333;
+}
+.libary p {
+  color: #333;
+}
+.pos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* padding-bottom: 100px;
+  justify-content: space-between; */
+}
+.card {
+  width: 300px;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #0070b8;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  border: 1px solid #00a6a6;
+}
+.card-image {
+  width: 250px;
+  margin: 0 auto 10px;
+}
+.card-details {
+  text-align: center;
+  flex-grow: 1;
+}
+.book-title {
+  font-size: 1.2rem;
+  color: #123;
+}
+.book-details {
+  color: #777;
+}
+
+/*  */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.contact {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: url(img/kontak.jpg);
+  background-size: cover;
+}
+
+.contact .content {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact .content h2 {
+  font-size: 50px;
+  font-weight: 500;
+  color: #000;
+  padding: 30px;
+}
+
+.contact .content p {
+  font-weight: 250;
+  font-size: 15px;
+  color: #000;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.container .contactInfo {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactInfo .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+
+.container .contactInfo .box .icon {
+  min-width: 60px;
+  height: 60px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 22px;
+}
+
+.container .contactInfo .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 20px;
+  color: #000;
+  flex-direction: column;
+  font-weight: 300;
+  text-shadow: 3px 2px 1px grey;
+}
+
+.container .contactInfo .box .text h3 {
+  font-weight: 500;
+  font-size: 25px;
+  color: #000000;
+  text-shadow: 3px 2px 1px grey;
+}
+
+.container .contactInfo .box .text p {
+  font-size: 15px;
+}
+
+.contactForm {
+  width: 40%;
+  padding: 40px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.contactForm h2 {
+  font-size: 30px;
+  color: #333;
+  font-weight: 500;
+}
+
+.contactForm .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contactForm .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"] {
+  width: 100px;
+  background: #00bcd4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+}
+
+@media (max-width: 991px) {
+  .contact {
+    padding: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  .container .contactInfo {
+    margin-bottom: 40px;
+  }
+
+  .isi {
+    height: 350px;
+    display: block;
+    justify-content: center;
+  }
+  .card {
+    padding-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .isi {
+    padding: 0;
+  }
+  .card {
+    width: 200px;
+    display: inline;
+    align-items: center;
+    flex-direction: column;
+    display: block;
+    border: 1px solid #0070b8;
+    padding: 10px;
+    margin: 10px;
+  }
+  .card-image {
+    margin-left: auto;
+    margin-left: auto;
+  }
+  .card .card-image {
+    align-items: center;
+    size: 20%;
+  }
+
+  .foto {
+    padding-left: 30px;
+    align-items: center;
+    width: 60%;
+  }
+  .pos {
+    padding-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    padding: none;
+    height: 80px;
+  }
+  .container .contactInfo,
+  .contactForm {
+    width: 100%;
+  }
+
+  .contact {
+    display: block;
+  }
+}
+
+@media (max-width: 680px) {
+  .isi {
+    height: 800px;
+    display: block;
+    justify-content: center;
+  }
+  .card {
+    padding-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .isi {
+    padding: 0;
+  }
+  .card {
+    width: 200px;
+    display: inline;
+    align-items: center;
+    flex-direction: column;
+    display: block;
+    border: 1px solid #0070b8;
+    padding: 10px;
+    margin: 10px;
+  }
+  .card-image {
+    margin-left: auto;
+    margin-left: auto;
+  }
+  .card .card-image {
+    align-items: center;
+    size: 20%;
+  }
+
+  .foto {
+    padding-left: 30px;
+    align-items: center;
+    width: 60%;
+  }
+  .pos {
+    padding-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    padding: none;
+    height: 80px;
+  }
+}
+
+.footerbootom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerbootom p {
+  color: white;
+}
