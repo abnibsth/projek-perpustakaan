@@ -515,6 +515,65 @@ nav p.judul {
     text-align: center;
   }
 }
+@media (max-width: 400px) {
+  .isi {
+    align-items: center;
+    height: 2150px;
+    display: block;
+    justify-content: center;
+  }
+  .card {
+    padding-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .libary {
+    align-items: center;
+    text-align: center;
+  }
+  #koleksi {
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  .isi {
+    padding: auto;
+  }
+  .card {
+    width: 350px;
+    display: inline;
+    align-items: center;
+    flex-direction: column;
+    display: block;
+    border: 1px solid #0070b8;
+    padding: 10px;
+    margin: 10px;
+  }
+  .card-image {
+    padding-right: 10px;
+    margin-left: auto;
+    margin-left: auto;
+  }
+  .card .card-image {
+    align-items: center;
+    size: 20%;
+  }
+
+  .foto {
+    padding-left: 30px;
+    align-items: center;
+    width: 100%;
+  }
+  .pos {
+    padding-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    padding: none;
+    height: 80px;
+  }
+}
 
 @media (max-width: 360px) {
   .isi {
