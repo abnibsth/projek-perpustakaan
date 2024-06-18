@@ -18,6 +18,7 @@ nav {
   align-items: center;
   background: #e4eefa;
   padding: 0px 5% 0px 5%;
+  z-index: 9999;
 }
 nav ul {
   display: flex;
