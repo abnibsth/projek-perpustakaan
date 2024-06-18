@@ -162,6 +162,7 @@ nav p.judul {
 }
 /* koleksi */
 .isi {
+  align-items: center;
   max-width: 960px;
   height: 500px;
   margin: 20px auto;
@@ -170,6 +171,7 @@ nav p.judul {
   margin-bottom: 600px;
 }
 .libary {
+  align-items: center;
   text-align: center;
 }
 .libary h2 {
@@ -435,23 +437,33 @@ nav p.judul {
     display: block;
   }
 }
+.footerbootom {
+  background-color: #000;
+  padding: 20px;
+  text-align: center;
+}
+.footerbootom p {
+  color: white;
+}
 
+/* isi */
 @media (max-width: 680px) {
   .isi {
     height: 800px;
     display: block;
     justify-content: center;
   }
+
   .card {
     padding-bottom: 100px;
     justify-content: space-between;
     align-items: center;
   }
-
   .isi {
     padding: 0;
   }
   .card {
+    align-items: center;
     width: 200px;
     display: inline;
     align-items: center;
@@ -484,13 +496,81 @@ nav p.judul {
     padding: none;
     height: 80px;
   }
+  .libary {
+    align-items: center;
+    text-align: center;
+  }
 }
 
-.footerbootom {
-  background-color: #000;
-  padding: 20px;
-  text-align: center;
+@media (max-width: 500px) {
+  .card {
+    align-items: center;
+    width: 200px;
+  }
+  .book-details {
+    align-items: center;
+  }
+  .libary {
+    align-items: center;
+    text-align: center;
+  }
 }
-.footerbootom p {
-  color: white;
+
+@media (max-width: 360px) {
+  .isi {
+    align-items: center;
+    height: 2150px;
+    display: block;
+    justify-content: center;
+  }
+  .card {
+    padding-bottom: 100px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .libary {
+    align-items: center;
+    text-align: center;
+  }
+  #koleksi {
+    text-align: center;
+    padding-left: 20px;
+  }
+
+  .isi {
+    padding: auto;
+  }
+  .card {
+    width: 300px;
+    display: inline;
+    align-items: center;
+    flex-direction: column;
+    display: block;
+    border: 1px solid #0070b8;
+    padding: 10px;
+    margin: 10px;
+  }
+  .card-image {
+    margin-left: auto;
+    margin-left: auto;
+  }
+  .card .card-image {
+    align-items: center;
+    size: 20%;
+  }
+
+  .foto {
+    padding-left: 30px;
+    align-items: center;
+    width: 100%;
+  }
+  .pos {
+    padding-left: 0%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: auto;
+    margin-right: auto;
+    padding: none;
+    height: 80px;
+  }
 }
